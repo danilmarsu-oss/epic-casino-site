@@ -314,7 +314,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 12px;
-  min-width: 430px;
+  min-width: 0;
 }
 
 th,
@@ -322,6 +322,8 @@ td {
   border: 1px solid var(--border-soft);
   padding: 10px;
   text-align: left;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 th {
@@ -520,5 +522,18 @@ th {
   .form-row-inline {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .seo table,
+  .static-content table {
+    font-size: 0.9rem;
+    table-layout: fixed;
+  }
+
+  .seo th,
+  .seo td,
+  .static-content th,
+  .static-content td {
+    padding: 8px;
   }
 }
